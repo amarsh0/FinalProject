@@ -1,2 +1,2 @@
 # FinalProject
-Fantast football app
+Fantasy football app
