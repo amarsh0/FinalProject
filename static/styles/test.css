@@ -1,0 +1,47 @@
+*{
+	 padding : 0;
+	 margin : 0;
+	 border : 0;
+}
+body{
+	 background-attachment : fixed;
+	 background-size : 100% auto;
+}
+.blended_grid{
+	 display : block;
+	 width : 900px;
+	 overflow : auto;
+	 margin : 30px auto 0 auto;
+}
+.pageHeader{
+	 background : rgb(255, 0, 0);
+	 color : #FF0000;
+	 float : left;
+	 clear : none;
+	 height : 200px;
+	 width : 900px;
+}
+.pageContent{
+	 background : rgb(0, 255, 0);
+	 color : #FFA500;
+	 float : left;
+	 clear : none;
+	 height : 600px;
+	 width : 700px;
+}
+.pageLeftMenu{
+	 background : rgb(0, 0, 255);
+	 color : #FFFF00;
+	 float : left;
+	 clear : none;
+	 height : 600px;
+	 width : 200px;
+}
+.pageFooter{
+	 background : rgb(255, 0, 0);
+	 color : #808000;
+	 float : left;
+	 clear : none;
+	 height : 100px;
+	 width : 900px;
+}
