@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <head>
-	 <link rel="stylesheet" href="{{ url_for('static',filename='styles/test.css') }}">
-	 <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/test.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css">
+    <title>Fantasy Football Draft Helper</title>
 </head>
 <body>
-<div class="blended_grid">
-	  <div class="pageHeader">
-		test
-	  </div>
-	  <div class="pageContent">
-		something
-	  </div>
-	  <div class="pageLeftMenu">
-		something else
-	  </div>
-	  <div class="pageFooter">
-		yet another something else
-	  </div>
-</div>
+    <div class="blended_grid">
+        <div class="pageHeader">
+            <fieldset>
+                <legend>Number of Teams</legend>
+                <div class="switch-toggle switch-candy">
+                    <input id="8" name="teamNum" type="radio" checked>
+                    <label for="8" onclick="">8</label>
+
+                    <input id="10" name="teamNum" type="radio">
+                    <label for="10" onclick="">10</label>
+
+                    <input id="12" name="teamNum" type="radio">
+                    <label for="12" onclick="">12</label>
+
+                    <a></a>
+                </div>
+            </fieldset>
+
+            <div class="headerDivider"></div>
+
+            <label class="switch-light switch-candy" onclick="">
+                <input type="checkbox">
+
+                <strong>
+                    PPR
+                </strong>
+
+                <span>
+                    <span>Full</span>
+                    <span>Half</span>
+                    <a></a>
+                </span>
+            </label>
+
+            <div class="headerDivider"></div>
+
+            
+        </div>
+    <div class="pageContent">
+        something
+    </div>
+    <div class="pageLeftMenu">
+        something else
+    </div>
+    <div class="pageFooter">
+        yet another something else
+    </div>
+    </div>
 </body>
 </html>
