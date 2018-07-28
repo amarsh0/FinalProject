@@ -1,8 +1,6 @@
 
 import json
 
-
-
 MainStatPlayers= {}
 totalplayer = []
 MainStatPlayers = {'puntret_tds': 0, 'Player_name': 'Tom Brady', 'receiving_tds': 0, 'Player_pos': "QB", 'rushing_2pt': 0, 'kickret_tds': 0, 'PPR': 286, 'rushing_tds': 0, 'fumbles': 7, 'passing_yds': 4551, 'receiving_yds': 0, 'HalfPPR': 286.0, 'passing_2pt': 2, 'rushing_yds': 28, 'receiving_2pt': 0, 'Player_id': '00-0019596', 'receptions': 0, 'passing_tds': 32, 'passing_ints': 8}
@@ -41,7 +39,7 @@ totalplayer.append(MainStatPlayers.copy())
 
 
 
-#if you want to load dic into json file
+#load dic into json file
 '''r = json.dumps(totalplayer)
 fp = open('test.json', 'a')
 
