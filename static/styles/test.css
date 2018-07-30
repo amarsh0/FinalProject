@@ -9,7 +9,7 @@ body{
 }
 .blended_grid{
     display : block;
-    width : 900px;
+    width : 1200px;
     overflow : auto;
     margin : 5px auto 0 auto;
 }
@@ -18,15 +18,15 @@ body{
     display: flex;
     float : left;
     clear : none;
-    height : 125px;
-    width : 900px;
+    height : 150px;
+    width : 1200px;
 }
 .pageContent{
     background : rgba(255, 255, 255, 0.5);
     float : left;
     clear : none;
     height : 600px;
-    width : 700px;
+    width : 1000px;
 }
 .pageLeftMenu{
     background : rgba(255, 255, 255, 0.5);
@@ -40,10 +40,28 @@ body{
     float : left;
     clear : none;
     height : 100px;
-    width : 900px;
+    width : 1200px;
 }
 
 .headerDivider {
     width: 2px;
     margin: 10px;
+}
+
+.columns {
+    column-width: 50px;
+    max-width: 75px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: 2em;
+    grid-gap: .5em;
+}
+
+form {
+    height: 150px;
+    display: flex;
 }
