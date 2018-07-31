@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="{{ url_for('static', filename='styles/css/style.css') }}">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css')}}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/test.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dataTables.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttons.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/colReorder.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/fixedHeader.bootstrap4.css') }}"/>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.bootstrap4.css') }}"/>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.bootstrap4.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.buttons.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/buttons.bootstrap4.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.colReorder.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.fixedHeader.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.responsive.js') }}"></script>
+
+</head><body><header><div class="container-width"><div class="logo-container">
+    </div><div class="clearfix">
+    </div></div></header><header title="Fantasy Football Helper"><div class="container-width"><div class="logo-container">
+    </div><div class="clearfix">
+    </div></div><div data-gjs="navbar" class="navbar"><div class="navbar-container"><div id="i2fzma" class="navbar-burger"><div class="navbar-burger-line">
+        </div><div class="navbar-burger-line">
+        </div><div class="navbar-burger-line">
+        </div></div><div class="c8256"><i class="c8303">Draft</i> HELPER<a href="" class="link"></a><br/><span class="c8538"></span></div><div data-gjs="navbar-items" class="navbar-items-c"><nav data-gjs="navbar-menu" class="navbar-menu"><a href="#" target="_blank" class="navbar-menu-link">HOME</a><a href="#" target="_blank" class="navbar-menu-link"><a href="" class="link"></a>MY DRAFT</a><a href="#" class="navbar-menu-link">LOG IN</a></nav></div></div></div></header><section class="flex-sect"><div id="iuna6n" class="c6883"><div class="gjs-lory-frame c6908"><div id="iv7bhc" class="gjs-lory-slides"><div id="ie2yue" class="gjs-lory-slide"><span data-highlightable="1" class="gjs-lory-prev c6953 disabled c12472"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z" class="gjs-hovered"></path></g></svg></span><span data-highlightable="1" class="gjs-lory-next c6989 c12557"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5" class="gjs-comp-selected"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z" class="gjs-hovered"></path></g></svg></span></div></div></div><span class="gjs-lory-prev c6953"></span><span class="gjs-lory-next c6989"></span></div><div id="iuk2hv" class="row"><div id="i90iel" class="cell"><b id="ilzazk">START A MOCK DRAFT</b><br/></div><a class="c9189"></a></div><div class="container-width"><div class="cards"><div class="c6058">
+	<div class="blended_grid">
+            <div class="pageHeader">
+                <fieldset>
+                    <legend>Number of Teams</legend>
+                    <div class="switch-toggle switch-candy">
+                        <input id="8" name="teamNum" type="radio" checked>
+                        <label for="8" onclick="">8</label>
+
+                        <input id="10" name="teamNum" type="radio">
+                        <label for="10" onclick="">10</label>
+
+                        <input id="12" name="teamNum" type="radio">
+                        <label for="12" onclick="">12</label>
+
+                        <a></a>
+                    </div>
+                </fieldset>
+
+                <div class="headerDivider"></div>
+
+                <fieldset>
+                    <legend>PPR</legend>
+                    <div class="switch-toggle switch-candy">
+                        <input id="full" name="ppr" type="radio">
+                        <label for="full" onclick="">Full</label>
+
+                        <input id="half" name="ppr" type="radio">
+                        <label for="half" onclick="">Half</label>
+
+                        <a></a>
+                    </div>
+                </fieldset>
+
+                <div class="headerDivider"></div>
+            </div>
+
+            <div class="pageContent">
+                <h1>Table Test</h1>
+                <table
+                    id="example"
+                    class="display"
+                    data-toggle="true"
+                    data-toolbar="#toolbar"
+                    data-search="true"
+                    data-show-columns="true"
+                    data-pagination="true"
+                    data-height="500">
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Touchdowns</th>
+                            <th>Button</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Touchdowns</th>
+                            <th>Button</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="pageLeftMenu">
+                something else
+            </div>
+
+            <div class="pageFooter">
+                yet another something else
+            </div>
+        </div>
+    <script>
+        $(document).ready(function(){
+            $('#example').DataTable({
+                "ajax": "../static/test.txt",
+                "columnDefs": [ {
+                    "targets": -1,
+                    "data": null,
+                    "defaultContent": "<button>Test!</button>"
+                } ]
+            } );
+        } );
+    </script>
+<br/></div></div></div></section><footer class="footer-under"><div class="container-width"><div class="footer-container"><div class="foot-lists"><div class="foot-list"><div class="foot-list-title"><b id="ivutfo">About us
+          </b></div><div class="foot-list-item">Contact
+          </div><div class="foot-list-item">Events
+          </div><div class="foot-list-item">Company
+          </div><div class="foot-list-item">Jobs
+          </div><div class="foot-list-item">Blog
+          </div></div><div class="foot-list"><div class="foot-list-title"><b id="i6uqo5">Services
+          </b></div><div class="foot-list-item">Education
+          </div><div class="foot-list-item">Partner
+          </div><div class="foot-list-item">Community
+          </div><div class="foot-list-item">Forum
+          </div><div class="foot-list-item">Download
+          </div><div class="foot-list-item">Upgrade
+          </div></div><div class="clearfix">
+        </div></div></div></div></footer><div class="c9886"><span class="c9922">© Copyright DraftHelper<br/></span></div><script>var items = document.querySelectorAll('#iuna6n');
+        for (var i = 0, len = items.length; i < len; i++) {
+          (function(){var e=this,t="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js",l=["0","false"],s="";s="true"==s?1:parseInt(s,10);var a={slidesToScroll:parseInt("1",10),enableMouseEvents:l.indexOf("")>=0?0:1,infinite:!isNaN(s)&&s,rewind:!(l.indexOf("")>=0),slideSpeed:parseInt("300",10),rewindSpeed:parseInt("600",10),snapBackSpeed:parseInt("200",10),ease:"ease",classNameFrame:"gjs-lory-frame",classNameSlideContainer:"gjs-lory-slides",classNamePrevCtrl:"gjs-lory-prev",classNameNextCtrl:"gjs-lory-next"},r=function(){window.sliderLory=lory(e,a)};if("undefined"==typeof lory){var n=document.createElement("script");n.src=t,n.onload=r,document.head.appendChild(n)}else r()}.bind(items[i]))();
+        }</script></body><html>

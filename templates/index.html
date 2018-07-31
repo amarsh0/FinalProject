@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css')}}">
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/test.css') }}">
 
@@ -108,11 +108,6 @@
                     "data": null,
                     "defaultContent": "<button>Test!</button>"
                 } ]
-            } );
-
-            $('#example tbody').on( 'click', 'button', function{
-                var data = table.row( $(this).parents('tr') ).data();
-                alert("TEST");
             } );
         } );
     </script>
