@@ -1,57 +1,120 @@
 <!DOCTYPE html>
-<head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/test.css') }}">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css">
-    <title>Fantasy Football Draft Helper</title>
-</head>
-<body>
-    <div class="blended_grid">
-        <div class="pageHeader">
-            <fieldset>
-                <legend>Number of Teams</legend>
-                <div class="switch-toggle switch-candy">
-                    <input id="8" name="teamNum" type="radio" checked>
-                    <label for="8" onclick="">8</label>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css')}}">
 
-                    <input id="10" name="teamNum" type="radio">
-                    <label for="10" onclick="">10</label>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/test.css') }}">
 
-                    <input id="12" name="teamNum" type="radio">
-                    <label for="12" onclick="">12</label>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dataTables.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttons.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/colReorder.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/fixedHeader.bootstrap4.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.bootstrap4.css') }}"/>
 
-                    <a></a>
-                </div>
-            </fieldset>
-
-            <div class="headerDivider"></div>
-
-            <label class="switch-light switch-candy" onclick="">
-                <input type="checkbox">
-
-                <strong>
-                    PPR
-                </strong>
-
-                <span>
-                    <span>Full</span>
-                    <span>Half</span>
-                    <a></a>
-                </span>
-            </label>
-
-            <div class="headerDivider"></div>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.bootstrap4.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.buttons.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/buttons.bootstrap4.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.colReorder.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.fixedHeader.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.responsive.js') }}"></script>
 
 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Fantasy Football Draft Helper</title>
+
+    </head>
+    <body>
+        <div class="blended_grid">
+            <div class="pageHeader">
+                <fieldset>
+                    <legend>Number of Teams</legend>
+                    <div class="switch-toggle switch-candy">
+                        <input id="8" name="teamNum" type="radio" checked>
+                        <label for="8" onclick="">8</label>
+
+                        <input id="10" name="teamNum" type="radio">
+                        <label for="10" onclick="">10</label>
+
+                        <input id="12" name="teamNum" type="radio">
+                        <label for="12" onclick="">12</label>
+
+                        <a></a>
+                    </div>
+                </fieldset>
+
+                <div class="headerDivider"></div>
+
+                <fieldset>
+                    <legend>PPR</legend>
+                    <div class="switch-toggle switch-candy">
+                        <input id="full" name="ppr" type="radio">
+                        <label for="full" onclick="">Full</label>
+
+                        <input id="half" name="ppr" type="radio">
+                        <label for="half" onclick="">Half</label>
+
+                        <a></a>
+                    </div>
+                </fieldset>
+
+                <div class="headerDivider"></div>
+            </div>
+
+            <div class="pageContent">
+                <h1>Table Test</h1>
+                <table
+                    id="example"
+                    class="display"
+                    data-toggle="true"
+                    data-toolbar="#toolbar"
+                    data-search="true"
+                    data-show-columns="true"
+                    data-pagination="true"
+                    data-height="500">
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Touchdowns</th>
+                            <th>Button</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Touchdowns</th>
+                            <th>Button</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="pageLeftMenu">
+                something else
+            </div>
+
+            <div class="pageFooter">
+                yet another something else
+            </div>
         </div>
-    <div class="pageContent">
-        something
-    </div>
-    <div class="pageLeftMenu">
-        something else
-    </div>
-    <div class="pageFooter">
-        yet another something else
-    </div>
-    </div>
-</body>
+    <script>
+        $(document).ready(function(){
+            $('#example').DataTable({
+                "ajax": "../static/test.txt",
+                "columnDefs": [ {
+                    "targets": -1,
+                    "data": null,
+                    "defaultContent": "<button>Test!</button>"
+                } ]
+            } );
+
+            $('#example tbody').on( 'click', 'button', function{
+                var data = table.row( $(this).parents('tr') ).data();
+                alert("TEST");
+            } );
+        } );
+    </script>
+    </body>
 </html>
