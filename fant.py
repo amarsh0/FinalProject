@@ -4,8 +4,9 @@ import json
 
 app = Flask(__name__)
 
-with open('static/test.json') as data_file:
+with open('static/test.txt') as data_file:
     data_load = json.load(data_file)
+
 
 columns = [
     {
