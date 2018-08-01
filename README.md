@@ -1,2 +1,0 @@
-# FinalProject
-Fantasy football app
