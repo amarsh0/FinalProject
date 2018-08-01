@@ -4,31 +4,9 @@ import json
 
 app = Flask(__name__)
 
-with open('static/test.txt') as data_file:
-    data_load = json.load(data_file)
-
-
-columns = [
-    {
-        "field": "player_name",
-        "title": "Name",
-        "sortable": True,
-    },
-    {
-        "field": "receiving_tds",
-        "title": "Touchdowns",
-        "sortable": True,
-    },
-    {
-        "field": "passing_yds",
-        "title": "Passing Yards",
-        "sortable": True,
-    },
-]
-
 @app.route("/")
 def index():
-    return render_template('index.html', data=data_load, columns=columns, title='is this part needed?')
+    return render_template('index.html')
 
 @app.route("/echo", methods=['POST'])
 def echo():

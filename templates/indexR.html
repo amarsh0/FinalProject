@@ -1,184 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="{{ url_for('static', filename='styles/css/style.css') }}">
-
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css')}}">
-
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/test.css') }}">
-
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dataTables.bootstrap4.css') }}"/>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/buttons.bootstrap4.css') }}"/>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/colReorder.bootstrap4.css') }}"/>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/fixedHeader.bootstrap4.css') }}"/>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.bootstrap4.css') }}"/>
-
-        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.bootstrap4.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.buttons.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/buttons.bootstrap4.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.colReorder.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.fixedHeader.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.responsive.js') }}"></script>
-
-</head><body><header><div class="container-width"><div class="logo-container">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="./css/style.css"></head><body><header><div class="container-width"><div class="logo-container">
     </div><div class="clearfix">
-    </div></div></header><header title="Fantasy Football Helper"><div class="container-width"><div class="logo-container">
+    </div></div></header><header title=""><div class="container-width"><div class="logo-container">
     </div><div class="clearfix">
     </div></div><div data-gjs="navbar" class="navbar"><div class="navbar-container"><div id="i2fzma" class="navbar-burger"><div class="navbar-burger-line">
         </div><div class="navbar-burger-line">
         </div><div class="navbar-burger-line">
-        </div></div><div class="c8256"><i class="c8303">Draft</i> HELPER<a href="" class="link"></a><br/><span class="c8538"></span></div><div data-gjs="navbar-items" class="navbar-items-c"><nav data-gjs="navbar-menu" class="navbar-menu"><a href="#" target="_blank" class="navbar-menu-link">HOME</a><a href="#" target="_blank" class="navbar-menu-link"><a href="" class="link"></a>MY DRAFT</a><a href="#" class="navbar-menu-link">LOG IN</a></nav></div></div></div></header><section class="flex-sect"><div id="iuna6n" class="c6883"><div class="gjs-lory-frame c6908"><div id="iv7bhc" class="gjs-lory-slides"><div id="ie2yue" class="gjs-lory-slide"><span data-highlightable="1" class="gjs-lory-prev c6953 disabled c12472"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z" class="gjs-hovered"></path></g></svg></span><span data-highlightable="1" class="gjs-lory-next c6989 c12557"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5" class="gjs-comp-selected"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z" class="gjs-hovered"></path></g></svg></span></div></div></div><span class="gjs-lory-prev c6953"></span><span class="gjs-lory-next c6989"></span></div><div id="iuk2hv" class="row"><div id="i90iel" class="cell"><b id="ilzazk">START A MOCK DRAFT</b><br/></div><a class="c9189"></a></div><div class="container-width"><div class="cards"><div class="c6058">
-	<div class="blended_grid">
-            <div class="pageHeader">
-                <fieldset>
-                    <legend>Number of Teams</legend>
-                    <div class="switch-toggle switch-candy">
-                        <input id="8" name="teamNum" type="radio" checked>
-                        <label for="8" onclick="">8</label>
-
-                        <input id="10" name="teamNum" type="radio">
-                        <label for="10" onclick="">10</label>
-
-                        <input id="12" name="teamNum" type="radio">
-                        <label for="12" onclick="">12</label>
-
-                        <a></a>
-                    </div>
-                </fieldset>
-
-
-            </div>
-
-            <div class="pageContent">
-                <h1>Table Test</h1>
-                <table
-                    id="example"
-                    class="display"
-                    data-toggle="true"
-                    data-toolbar="#toolbar"
-                    data-search="true"
-                    data-show-columns="true"
-                    data-pagination="true"
-                    data-height="500">
-                    <thead>
-                        <tr>
-                            <th>Expert Rank</th>
-                            <th>PPR Rank</th>
-                            <th>Bye Week</th>
-                            <th>Player Name</th>
-                            <th>Team</th>
-                            <th>Position</th>
-                            <th>Consistency Rank</th>
-                            <th>Total Points</th>
-                            <th>Combined VS ADP</th>
-                            <th>Overall Rank</th>
-                            <th>ADP</th>
-                            <th>PlayerID</th>
-                            <th>Average Points/Game</th>
-                            <th>CV</th>
-                            <th>Button</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Expert Rank</th>
-                            <th>PPR Rank</th>
-                            <th>Bye Week</th>
-                            <th>Player Name</th>
-                            <th>Team</th>
-                            <th>Position</th>
-                            <th>Consistency Rank</th>
-                            <th>Total Points</th>
-                            <th>Combined VS ADP</th>
-                            <th>Overall Rank</th>
-                            <th>ADP</th>
-                            <th>PlayerID</th>
-                            <th>Average Points/Game</th>
-                            <th>CV</th>
-                            <th>Button</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-
-            <div class="pageLeftMenu">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1>TEAM</h1>
-				<table border =1>
-					<tr><th>QB</th><th id="QB">NAME</th></tr>
-					<tr><th>RB</th><th id="RB">NAME</th></tr>
-					<tr><th>WR</th><th id="WR">NAME</th></tr>
-					<tr><th>TE</th><th id="TE">NAME</th></tr>
-				</table>
-            </div>
-
-            <div class="pageFooter">
-                <table>
-                  <tr><td>QB Estimated Points:</td><td id="QBest"></td></tr>
-                  <tr><td>RB Estimated Points:</td><td id="RBest"></td></tr>
-                  <tr><td>WR Estimated Points:</td><td id="WRest"></td></tr>
-                  <tr><td>TE Estimated Points:</td><td id="TEest"></td></tr>
-                </table>
-            </div>
-        </div>
-    <script>
-        $(document).ready(function(){
-            var table = $('#example').DataTable({
-                "ajax": "../static/tes.txt",
-                "columnDefs": [
-                  {
-                    "targets": -1,
-                    "data": null,
-                    "defaultContent": "<button>Add</button>"
-                  },
-                  {
-                    "targets": [1],
-                    "visible": false,
-                    "searchable": false
-                  },
-                  {
-                    "targets": [7],
-                    "visible": false,
-                    "searchable": false
-                  },
-                  {
-                    "targets": [8],
-                    "visible": false,
-                    "searchable": false
-                  },
-                  {
-                    "targets": [11],
-                    "visible": false,
-                    "searchable": false
-                  },
-                  {
-                    "targets": [12],
-                    "visible": false,
-                    "searchable": false
-                  },
-                  {
-                    "targets": [13],
-                    "visible": false,
-                    "searchable": false
-                  }
-              ]
-            } );
-            $('#example tbody').on( 'click', 'button', function () {
-                var data = table.row($(this).parents('tr')).data();
-                var test = $("#"+data[5]).text();
-                $("#"+data[5]).replaceWith("<th>"+data[3]+"</th>");
-                $("#"+data[5]+"est").replaceWith("<td>"+data[12]+"</td>");
-                table.row($(this).parents('tr'))
-                    .remove()
-                    .draw();
-
-            } );
-        } );
-    </script>
-<br/></div></div></div></section><footer class="footer-under"><div class="container-width"><div class="footer-container"><div class="foot-lists"><div class="foot-list"><div class="foot-list-title"><b id="ivutfo">About us
+        </div></div><div class="c8256"><i class="c8303">Draft</i> HELPER<a href="" class="link"></a><br/><span class="c8538"></span></div><div data-gjs="navbar-items" class="navbar-items-c"><nav data-gjs="navbar-menu" class="navbar-menu"><a href="#" target="_blank" class="navbar-menu-link">HOME</a><a href="#" target="_blank" class="navbar-menu-link"><a href="index" class="link">MY DRAFT</a></a><a href="#" class="navbar-menu-link">LOG IN</a></nav></div></div></div></header><section class="flex-sect"><div id="iuna6n" class="c6883"><span class="gjs-lory-prev c6953"></span><span class="gjs-lory-next c6989"></span></div><div class="container-width"></div><div data-tabs="1" id="iismlc"><nav data-tab-container="1" class="tab-container"><a href="#tab1" data-tab="1" class="tab"></a></nav><div id="tab1" data-tab-content="1" class="tab-content"><img src="static/images/img.png" height="540px" width="960px" class="c7850"/></div></div></section><footer class="footer-under"><div class="container-width"><div class="footer-container"><div class="foot-lists"><div class="foot-list"><div class="foot-list-title"><b id="ivutfo">About us
           </b></div><div class="foot-list-item">Contact
           </div><div class="foot-list-item">Events
           </div><div class="foot-list-item">Company
@@ -195,4 +22,12 @@
         </div></div></div></div></footer><div class="c9886"><span class="c9922">© Copyright DraftHelper<br/></span></div><script>var items = document.querySelectorAll('#iuna6n');
         for (var i = 0, len = items.length; i < len; i++) {
           (function(){var e=this,t="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js",l=["0","false"],s="";s="true"==s?1:parseInt(s,10);var a={slidesToScroll:parseInt("1",10),enableMouseEvents:l.indexOf("")>=0?0:1,infinite:!isNaN(s)&&s,rewind:!(l.indexOf("")>=0),slideSpeed:parseInt("300",10),rewindSpeed:parseInt("600",10),snapBackSpeed:parseInt("200",10),ease:"ease",classNameFrame:"gjs-lory-frame",classNameSlideContainer:"gjs-lory-slides",classNamePrevCtrl:"gjs-lory-prev",classNameNextCtrl:"gjs-lory-next"},r=function(){window.sliderLory=lory(e,a)};if("undefined"==typeof lory){var n=document.createElement("script");n.src=t,n.onload=r,document.head.appendChild(n)}else r()}.bind(items[i]))();
+        }
+        var items = document.querySelectorAll('#iismlc');
+        for (var i = 0, len = items.length; i < len; i++) {
+          (function(){var t,e=this,a="[data-tab]",n=document.body,r=n.matchesSelector||n.webkitMatchesSelector||n.mozMatchesSelector||n.msMatchesSelector,o=function(){var a=e.querySelectorAll("[data-tab-content]")||[];for(t=0;t<a.length;t++)a[t].style.display="none"},i=function(n){var r=e.querySelectorAll(a)||[];for(t=0;t<r.length;t++){var i=r[t],s=i.className.replace("tab-active","").trim();i.className=s}o(),n.className+=" tab-active";var l=n.getAttribute("href"),c=e.querySelector(l);c&&(c.style.display="")},s=e.querySelector(".tab-active"+a);s=s||e.querySelector(a),s&&i(s),e.addEventListener("click",function(t){var e=t.target;r.call(e,a)&&i(e)})}.bind(items[i]))();
         }</script></body><html>
+
+<style>
+* { box-sizing: border-box; } body {margin: 0;}body{background-color:#081437;}#ivutfo{font-size:18px;}#i6uqo5{font-size:18px;}.clearfix{clear:both;}.container-width{width:90%;max-width:1150px;margin-top:0px;margin-right:auto;margin-bottom:0px;margin-left:auto;}.logo-container{float:left;width:50%;}.flex-sect{padding-top:100px;padding-right:0px;padding-bottom:100px;padding-left:0px;font-family:Helvetica, serif;background-color:#081437;}.footer-under{background-color:rgb(49, 40, 51);padding-bottom:100px;padding-top:100px;min-height:500px;color:rgb(238, 238, 238);position:relative;font-weight:100;font-family:Helvetica, serif;}.footer-container{display:inline !important;flex-wrap:wrap;align-items:stretch;justify-content:space-around;margin:0 1px 0 0;}.foot-list{float:left;width:200px;}.foot-list-title{font-weight:400;margin-bottom:10px;padding-top:0.5em;padding-right:0px;padding-bottom:0.5em;padding-left:0px;}.foot-list-item{color:rgba(238, 238, 238, 0.8);font-size:1em;padding-top:0.5em;padding-right:0px;padding-bottom:0.5em;padding-left:0px;}.foot-list-item:hover{color:rgb(238, 238, 238);}.navbar-items-c{display:inline-block;float:right;}.navbar{color:rgb(221, 221, 221);min-height:50px;width:101%;background-color:#081437;margin:29px 0 0 0;height:26px;max-width:auto;top:60px;bottom:4px;}.navbar-container{max-width:950px;margin-top:0px;margin-right:auto;margin-bottom:0px;margin-left:auto;width:95%;font-weight:600;letter-spacing:normal;color:#dddddd;top:-4px;bottom:4px;margin:0 auto 0 auto;}.navbar-container::after{content:"";clear:both;display:block;}.navbar-menu{padding-top:10px;padding-right:0px;padding-bottom:10px;padding-left:0px;display:block;float:right;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding:10px 0 15px 0;margin:0 0 12px 0;bottom:3px;}.navbar-menu-link{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;color:inherit;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:currentcolor;display:inline-block;padding-top:10px;padding-right:15px;padding-bottom:10px;padding-left:15px;font-family:Trebuchet MS, Helvetica, sans-serif;}.navbar-burger{margin-top:10px;margin-right:0px;margin-bottom:10px;margin-left:0px;width:45px;padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;display:none;float:right;cursor:pointer;}.navbar-burger-line{padding-top:1px;padding-right:1px;padding-bottom:1px;padding-left:1px;background-color:white;margin-top:5px;margin-right:0px;margin-bottom:5px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.c6883{position:relative;width:1014px;margin:-60px 21px 15px 23px;height:400px;display:inline !important;padding:15px 0 25px 0;max-width:12px;left:0;}.c6953{position:absolute;display:block;cursor:pointer;top:50%;left:0;margin-top:-25px;}.c6989{position:absolute;display:block;cursor:pointer;top:50%;right:0;margin-top:-25px;}.tab{text-decoration-line:none;text-decoration-style:solid;text-decoration-color:currentcolor;color:inherit;padding-top:7px;padding-right:14px;padding-bottom:7px;padding-left:14px;transition-property:opacity;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;display:inline-block;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;margin-right:10px;}.tab.tab-active{background-color:rgb(13, 148, 230);color:white;}.tab-content{padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left:12px;min-height:100px;animation-name:fadeEffect;animation-duration:1s;animation-timing-function:ease;animation-delay:0s;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:none;animation-play-state:running;margin:0 0 6px 0;}.c8256{padding:10px 10px 10px 10px;text-shadow:5px 3px 4px #0f1a1a;letter-spacing:3px;font-size:53px;font-weight:800;line-height:61px;position:relative;margin:2px 0 4px 0;text-decoration:none;text-align:left;top:69px;display:inline !important;color:rgba(208,242,103,0.9);font-family:Tahoma, Geneva, sans-serif;}.c8538{caret-color:rgb(34, 34, 34);color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:left;text-indent:0px;text-transform:none;white-space:normal;widows:auto;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);text-decoration:none;display:inline !important;float:none;}.c8303{color:#dddddd;}.gjs-comp-selected.c8303{color:#dddddd;letter-spacing:3px;}.c9886{padding:10px;top:9px;min-height:6px;background-color:rgb(49, 40, 51);}.c9922{caret-color:rgb(83, 83, 83);font-size:16px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:auto;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px;background-color:rgb(33, 33, 33);text-decoration:none;display:inline !important;float:none;line-height:17px;color:rgba(238,238,238,0.81);opacity:0.86;font-family:Arial, Helvetica, sans-serif;}.c7850{color:black;margin:0 0 9px 450px;min-height:5px;}@media (max-width: 768px){.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}.navbar-burger{display:block;}.navbar-items-c{display:none;width:100%;}.navbar-menu{width:100%;}.navbar-menu-link{display:block;}}@media (max-width: 480px){.foot-lists{display:none;}.foot-lists{display:none;}}@keyframes fadeEffect{0%{opacity:0;}100%{opacity:1;}0%{opacity:0;}100%{opacity:1;}0%{opacity:0;}100%{opacity:1;}0%{opacity:0;}100%{opacity:1;}0%{opacity:0;}100%{opacity:1;}0%{opacity:0;}100%{opacity:1;}}
+</style>
