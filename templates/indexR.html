@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="{{ url_for('static', filename='styles/css/style.css') }}">
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css')}}">
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/test.css') }}">
 
@@ -45,22 +45,7 @@
                     </div>
                 </fieldset>
 
-                <div class="headerDivider"></div>
 
-                <fieldset>
-                    <legend>PPR</legend>
-                    <div class="switch-toggle switch-candy">
-                        <input id="full" name="ppr" type="radio">
-                        <label for="full" onclick="">Full</label>
-
-                        <input id="half" name="ppr" type="radio">
-                        <label for="half" onclick="">Half</label>
-
-                        <a></a>
-                    </div>
-                </fieldset>
-
-                <div class="headerDivider"></div>
             </div>
 
             <div class="pageContent">
@@ -76,15 +61,39 @@
                     data-height="500">
                     <thead>
                         <tr>
+                            <th>Expert Rank</th>
+                            <th>PPR Rank</th>
+                            <th>Bye Week</th>
                             <th>Player Name</th>
-                            <th>Touchdowns</th>
+                            <th>Team</th>
+                            <th>Position</th>
+                            <th>Consistency Rank</th>
+                            <th>Total Points</th>
+                            <th>Combined VS ADP</th>
+                            <th>Overall Rank</th>
+                            <th>ADP</th>
+                            <th>PlayerID</th>
+                            <th>Average Points/Game</th>
+                            <th>CV</th>
                             <th>Button</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Expert Rank</th>
+                            <th>PPR Rank</th>
+                            <th>Bye Week</th>
                             <th>Player Name</th>
-                            <th>Touchdowns</th>
+                            <th>Team</th>
+                            <th>Position</th>
+                            <th>Consistency Rank</th>
+                            <th>Total Points</th>
+                            <th>Combined VS ADP</th>
+                            <th>Overall Rank</th>
+                            <th>ADP</th>
+                            <th>PlayerID</th>
+                            <th>Average Points/Game</th>
+                            <th>CV</th>
                             <th>Button</th>
                         </tr>
                     </tfoot>
@@ -92,22 +101,82 @@
             </div>
 
             <div class="pageLeftMenu">
-                something else
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>TEAM</h1>
+				<table border =1>
+					<tr>
+						<th>QB</th><th id="QB">NAME</th><th>BUTTON</th></tr>
+					<tr><th>RB</th><th id="RB">NAME</th><th>BUTTON</th></tr>
+					<tr><th>WR</th><th id="WR">NAME</th><th>BUTTON</th></tr>
+					<tr><th>TE</th><th id="TE">NAME</th><th>BUTTON</th></tr>
+					<tr><th>FLEX</th><th id="fuckThisIndexInParticular">NAME</th><th>BUTTON</th></tr>
+					<tr><th>KICK</th><th id="K">NAME</th><th>BUTTON</th></tr>
+					<tr><th>DEF</th><th id="DEF">NAME</th><th>BUTTON</th></tr>
+				</table>
             </div>
 
             <div class="pageFooter">
-                yet another something else
+                <h1>PROJECTED POINTS</h1>
+        <table border =1> <tr><th>NEED</th><th>TTL</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th>KICK</th><th>DEF</th></tr>
+      <tr><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th></tr>
+		</table>
             </div>
         </div>
     <script>
         $(document).ready(function(){
-            $('#example').DataTable({
-                "ajax": "../static/test.txt",
-                "columnDefs": [ {
+            var table = $('#example').DataTable({
+                "ajax": "../static/tes.txt",
+                "columnDefs": [
+                  {
                     "targets": -1,
                     "data": null,
-                    "defaultContent": "<button>Test!</button>"
-                } ]
+                    "defaultContent": "<button>Add</button>"
+                  },
+                  {
+                    "targets": [1],
+                    "visible": false,
+                    "searchable": false
+                  },
+                  {
+                    "targets": [7],
+                    "visible": false,
+                    "searchable": false
+                  },
+                  {
+                    "targets": [8],
+                    "visible": false,
+                    "searchable": false
+                  },
+                  {
+                    "targets": [11],
+                    "visible": false,
+                    "searchable": false
+                  },
+                  {
+                    "targets": [12],
+                    "visible": false,
+                    "searchable": false
+                  },
+                  {
+                    "targets": [13],
+                    "visible": false,
+                    "searchable": false
+                  }
+              ]
+            } );
+            $('#example tbody').on( 'click', 'button', function () {
+                var data = table.row($(this).parents('tr')).data();
+                var test = $("#"+data[5]).text();
+                alert("FUCK YOU " + test);
+                $("#"+data[5]).replaceWith("<th>"+data[3]+"<th>");
+                table.row($(this).parents('tr'))
+                    .remove()
+                    .draw();
+
             } );
         } );
     </script>

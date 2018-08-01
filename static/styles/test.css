@@ -9,7 +9,7 @@ body{
 }
 .blended_grid{
     display : block;
-    width : 1200px;
+    width : 1800px;
     overflow : auto;
     margin : 5px auto 0 auto;
 }
@@ -19,7 +19,7 @@ body{
     float : left;
     clear : none;
     height : 150px;
-    width : 1000px;
+    width : 1600px;
 	font-size: 25px;
 }
 .pageContent{
@@ -27,7 +27,7 @@ body{
     float : left;
     clear : none;
     height : 600px;
-    width : 1000px;
+    width : 1600px;
 	font-size: 20px;
 
 }
@@ -37,14 +37,14 @@ body{
     clear : none;
     height : 600px;
     width : 200px;
-	font-size: 25px;
+	font-size: 15px;
 }
 .pageFooter{
     background : rgba(255, 255, 255, 0.5);
     float : left;
     clear : none;
     height : 100px;
-    width : 1000px;
+    width : 1600px;
 	font-size: 25px;
 }
 
