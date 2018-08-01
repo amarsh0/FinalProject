@@ -108,22 +108,20 @@
                 <br>
                 <h1>TEAM</h1>
 				<table border =1>
-					<tr>
-						<th>QB</th><th id="QB">NAME</th><th>BUTTON</th></tr>
-					<tr><th>RB</th><th id="RB">NAME</th><th>BUTTON</th></tr>
-					<tr><th>WR</th><th id="WR">NAME</th><th>BUTTON</th></tr>
-					<tr><th>TE</th><th id="TE">NAME</th><th>BUTTON</th></tr>
-					<tr><th>FLEX</th><th id="fuckThisIndexInParticular">NAME</th><th>BUTTON</th></tr>
-					<tr><th>KICK</th><th id="K">NAME</th><th>BUTTON</th></tr>
-					<tr><th>DEF</th><th id="DEF">NAME</th><th>BUTTON</th></tr>
+					<tr><th>QB</th><th id="QB">NAME</th></tr>
+					<tr><th>RB</th><th id="RB">NAME</th></tr>
+					<tr><th>WR</th><th id="WR">NAME</th></tr>
+					<tr><th>TE</th><th id="TE">NAME</th></tr>
 				</table>
             </div>
 
             <div class="pageFooter">
-                <h1>PROJECTED POINTS</h1>
-        <table border =1> <tr><th>NEED</th><th>TTL</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th>KICK</th><th>DEF</th></tr>
-      <tr><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th><th>PTS</th></tr>
-		</table>
+                <table>
+                  <tr><td>QB Estimated Points:</td><td id="QBest"></td></tr>
+                  <tr><td>RB Estimated Points:</td><td id="RBest"></td></tr>
+                  <tr><td>WR Estimated Points:</td><td id="WRest"></td></tr>
+                  <tr><td>TE Estimated Points:</td><td id="TEest"></td></tr>
+                </table>
             </div>
         </div>
     <script>
@@ -171,8 +169,8 @@
             $('#example tbody').on( 'click', 'button', function () {
                 var data = table.row($(this).parents('tr')).data();
                 var test = $("#"+data[5]).text();
-                alert("FUCK YOU " + test);
-                $("#"+data[5]).replaceWith("<th>"+data[3]+"<th>");
+                $("#"+data[5]).replaceWith("<th>"+data[3]+"</th>");
+                $("#"+data[5]+"est").replaceWith("<td>"+data[12]+"</td>");
                 table.row($(this).parents('tr'))
                     .remove()
                     .draw();
